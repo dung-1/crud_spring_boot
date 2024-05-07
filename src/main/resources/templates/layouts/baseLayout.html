@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Spring Boot Thymeleaf Layout</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <script src="/js/script.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Header</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/page1">Page 1</a></li>
+            <li><a href="/page2">Page 2</a></li>
+        </ul>
+    </nav>
+
+    <div th:replace="~{::${contentFragment}}"></div>
+
+    <footer>
+        <p>Footer</p>
+    </footer>
+</body>
+
+</html>
